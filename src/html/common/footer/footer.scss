@@ -1,0 +1,46 @@
+.footer {
+ min-height: 200px;
+ display: flex;
+ align-items: center;
+ background-color: $main-titles-color;
+
+ .wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ &__links-box {
+  display: flex;
+  align-items: center;
+ }
+
+ &__link {
+  height: fit-content;
+
+  &:not(:last-child) {
+   margin-right: 25px;
+  }
+ }
+
+ &__date {
+  color: $secondary-text-color;
+ }
+
+ @media screen and (max-width: 768px) {
+ .wrapper{
+  flex-direction: column;
+ }
+
+ &__logo{
+  width: 86px;
+  margin-bottom: 20px;
+ }
+
+ &__date{
+  margin-top: 20px;
+  font-size: 13px;
+ }
+ }
+}

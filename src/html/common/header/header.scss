@@ -1,0 +1,150 @@
+.header {
+  &__top {
+    .wrapper {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 40px;
+    }
+  }
+
+  &__info {
+    color: #D12E32;
+  }
+
+  &__bottom {
+    background-color: $main-titles-color;
+
+    .wrapper {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-item {
+    font-size: $text-size;
+    color: $secondary-text-color;
+    text-transform: uppercase;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      transition: all .2s;
+      border-radius: 8px;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+  }
+
+  &__registration {
+    color: $secondary-text-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -5px;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      transition: all .2s;
+      border-radius: 8px;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    &__nav {
+      display: none;
+    }
+
+    &__registration {
+      font-size: 14px;
+    }
+
+    &__top {
+      .wrapper {
+        height: 60px;
+      }
+
+      img {
+        margin-right: 15px;
+      }
+    }
+
+    &__bottom {
+      .wrapper {
+        height: 35px;
+      }
+    }
+
+    &__info {
+      font-size: 13px;
+      max-width: 110px;
+    }
+  }
+}
+
+.burger {
+  width: 22px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  display: none;
+
+  .burger-line {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    border-radius: 8px;
+    background-color: white;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    &:before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+  }
+}

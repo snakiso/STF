@@ -1,0 +1,102 @@
+.hero {
+ background-image: url(../img/main-page/hero-bg.png);
+ background-repeat: no-repeat;
+ background-position: bottom right;
+
+ &__content {
+  padding-top: 60px;
+  max-width: 1030px;
+  padding-bottom: 405px;
+ }
+
+ &__logos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $gaps;
+ }
+
+ &__date {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #D12E32;
+  margin-bottom: 10px;
+ }
+
+ &__place {
+  color: $main-titles-color;
+  max-width: 250px;
+ }
+
+ &__title {
+  color: $main-titles-color;
+  font-weight: 600;
+  font-size: 32px;
+  margin: $gaps 0 $gaps 0;
+  max-width: 900px;
+ }
+
+ @media screen and (max-width: 1200px) {
+  &__content {
+   max-width: 730px;
+  }
+
+  &__title {
+   font-size: 24px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  background-image: url(../img/main-page/flag.png);
+  background-size: cover;
+
+  &__content {
+   text-align: center;
+   padding-bottom: 250px;
+   padding-top: 40px;
+   display: flex;
+   flex-flow: column;
+  }
+
+  &__logos {
+   align-items: center;
+   margin-bottom: 30px;
+   order: 1;
+
+   img {
+    max-width: 200px;
+
+    &:nth-child(2) {
+     max-width: 110px;
+    }
+   }
+  }
+
+  &__date {
+   font-size: 28px;
+  }
+
+  &__place {
+   font-size: 14px;
+   margin: auto;
+  }
+
+  &__title {
+   font-size: 22px;
+   margin: 0 0 30px 0;
+   order: 2;
+  }
+
+  &__info {
+   order: 3;
+  }
+
+
+ }
+
+ @media screen and (max-width: 500px) {
+  background-size: contain;
+ }
+}
+
+

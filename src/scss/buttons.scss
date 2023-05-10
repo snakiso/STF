@@ -1,0 +1,43 @@
+.button {
+ background-color: $other-color;
+ padding: 15px 20px;
+ font-weight: 500;
+ font-size: 16px;
+ text-align: center;
+ letter-spacing: 0.04em;
+ color: $secondary-text-color;
+ width: fit-content;
+ height: fit-content;
+ display: flex;
+ align-items: center;
+
+ img {
+  margin-left: 10px;
+  transition: all .3s;
+ }
+
+ &:hover {
+  img {
+   margin-left: 15px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  font-size: 13px;
+
+  img {
+   height: 10px;
+  }
+ }
+}
+
+.hero {
+ .button {
+  margin-top: 30px;
+  order: 4;
+
+  @media screen and (max-width: 768px) {
+   margin: 30px auto 0 auto;
+  }
+ }
+}

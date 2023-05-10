@@ -1,0 +1,149 @@
+.decor-title-block {
+ height: 150px;
+ position: relative;
+
+ &__back-line {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  height: 150px;
+  width: 55%;
+  background-color: $main-titles-color;
+
+  @media screen and (max-width: 1200px) {
+   display: none;
+  }
+ }
+
+ &__front-line {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #2294CB;
+  height: 110px;
+  width: 58%;
+
+  &::before {
+   position: absolute;
+   content: '';
+   width: 90%;
+   border-radius: 3px;
+   height: 7px;
+   bottom: 25px;
+   background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(253, 255, 255, 1) 100%);
+  }
+
+  @media screen and (max-width: 1200px) {
+   width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+   bottom: -85px;
+  }
+ }
+
+ @media screen and (max-width: 1200px) {
+  &__back-line {
+   display: none;
+  }
+
+  &__front-line {
+   width: 100%;
+  }
+
+ }
+
+ @media screen and (max-width: 768px) {
+  height: 100px;
+
+  &__front-line {
+   bottom: -85px;
+
+   &::before {
+    height: 4px;
+   }
+  }
+ }
+}
+
+.tasks {
+ .decor-title-block {
+  top: -150px;
+
+  @media screen and (max-width: 768px) {
+   top: -110px;
+   ;
+  }
+ }
+
+}
+
+.forum {
+ .decor-title-block {
+
+  &__back-line {
+   width: 60%;
+  }
+
+  &__front-line {
+   width: 90%;
+   background: linear-gradient(89.83deg, #2192C9 75.29%, rgba(33, 146, 201, 0.11168) 91.18%, rgba(33, 146, 201, 0) 97.93%);
+
+   &:before {
+    width: 37%;
+   }
+
+   @media screen and (max-width: 1200px) {
+    background-color: #2294CB;
+    width: 100%;
+
+    &::before {
+     width: 90%;
+     height: 4px;
+    }
+   }
+
+   @media screen and (max-width: 768px) {
+    bottom: 0;
+    height: 100px;
+   }
+  }
+ }
+}
+
+.exhibition {
+ .decor-title-block {
+  &__back-line {
+   right: 0;
+   left: auto;
+   width: 64%;
+  }
+
+  &__front-line {
+   right: 0;
+   left: auto;
+   background: linear-gradient(90.01deg, #2192C9 78.46%, rgba(33, 146, 201, 0) 99.1%);
+   transform: matrix(-1, 0, 0, 1, 0, 0);
+   width: 95%;
+
+   &::before {
+    width: 1800px;
+   }
+
+   @media screen and (max-width: 1920px) {
+    &::before {
+     width: 1500px;
+    }
+   }
+
+   @media screen and (max-width: 1200px) {
+    display: none;
+   }
+  }
+
+  @media screen and (max-width: 768px) {
+   height: fit-content;
+  }
+ }
+}

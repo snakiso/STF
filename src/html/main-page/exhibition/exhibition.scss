@@ -1,0 +1,174 @@
+.exhibition {
+ position: relative;
+ background-image: url(../img/main-page/exhibition-bg.png);
+ background-repeat: no-repeat;
+ background-position: right;
+
+ &__container {
+  position: relative;
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  min-height: 530px;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 30px;
+ }
+
+ &__img {
+  position: absolute;
+  left: 0;
+
+  img {
+   position: relative;
+   width: 100%;
+   left: -200px;
+  }
+ }
+
+ &__content {
+  position: relative;
+ }
+
+ &__text {
+  max-width: 573px;
+  margin-bottom: 30px;
+  line-height: 150%;
+ }
+
+ &__sections {
+  margin-top: 70px;
+ }
+
+ &__subtitle {
+  font-weight: 500;
+  font-size: 24px;
+  color: $other-color;
+ }
+
+ &__sections-box {
+  display: flex;
+  margin-top: 40px;
+ }
+
+ &__sections-column:first-child {
+  margin-right: 65px;
+ }
+
+ &__sections-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+   margin-right: 25px;
+   width: 38px;
+   height: 28px;
+  }
+ }
+
+
+ @media screen and (max-width: 1700px) {
+  &__img {
+   position: relative;
+   margin-right: 30px;
+
+   img {
+    left: 0;
+   }
+  }
+ }
+
+ @media screen and (max-width: 1200px) {
+
+  &__content {
+   left: 0;
+   padding: 20px 0;
+  }
+
+  &__container {
+   flex-direction: column;
+   justify-content: space-between;
+   margin-top: 0;
+  }
+
+  &__img {
+   margin: 0;
+   position: relative;
+
+   img {
+    left: 0;
+   }
+  }
+
+  &__subtitle {
+   padding: 0 15px;
+  }
+
+  &__sections-box {
+   padding: 0 15px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  background: none;
+
+  &__container {
+   margin-top: 0;
+   padding: 0;
+
+   img {
+    width: 100%;
+   }
+  }
+
+  &__text {
+   font-size: 14px;
+  }
+
+  &__content {
+   padding: 25px 15px;
+  }
+
+  &__sections {
+   margin: 0;
+  }
+
+  &__sections-box {
+   padding: 0 15px;
+   flex-direction: column;
+   margin-top: 15px;
+  }
+
+  &__sections-column:first-child {
+   margin-right: 20px;
+   margin-bottom: 20px;
+   position: relative;
+
+   &::after {
+    position: absolute;
+    content: '';
+    width: 110%;
+    height: 5px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+   }
+  }
+
+  &__sections-item {
+   font-size: 14px;
+   max-width: 320px;
+   line-height: 143%;
+
+   img {
+    margin-right: 10px;
+   }
+  }
+
+  &__subtitle {
+   padding: 0 15px;
+   font-size: 22px;
+  }
+ }
+}

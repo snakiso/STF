@@ -1,0 +1,66 @@
+$main-titles-color: rgba(9, 106, 166, 1);
+$main-text-color: rgba(49, 49, 49, 1);
+$secondary-text-color: white;
+$other-color: rgba(57, 181, 242, 1);
+$titles-size: 40px;
+$titles-weight: 600;
+$text-size: 16px;
+$gaps: 60px;
+$main-padding: 120px;
+
+@media screen and (max-width: 768px) {
+  $titles-size: 24px;
+  $text-size: 14px;
+  $gaps: 30px;
+  $main-padding: 50px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.db {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+@import '../scss/animations';
+@import '../html/common/header/header';
+@import '../html/common/footer/footer';
+@import '../html/main-page/hero/hero';
+@import '../html/main-page/tasks/tasks';
+@import '../html/main-page/gallery/gallery';
+@import '../html/main-page/forum/forum';
+@import '../html/main-page/exhibition/exhibition';
+@import '../html/main-page/organizers/organizers';
+@import '../html/main-page/place/place';
+@import '../html/common/menu/menu';
+@import '../scss/grey-line';
+@import '../scss/gradient-grey-line';
+@import '../scss/titles';
+@import '../scss/wrapper';
+@import '../scss/buttons';
+@import '../scss/logos';
+@import '../scss/cards-box';
+@import '../scss/card';
+@import '../html/contacts-page/contacts';
+@import '../html/tour-agencies/tour-agencies';

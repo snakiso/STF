@@ -1,0 +1,38 @@
+.logo {
+ text-align: center;
+ max-width: 161px;
+
+ &__position,
+ &__more-info {
+  font-size: 14px;
+  color: #747474;
+ }
+
+ &__position {
+  margin-bottom: 15px;
+ }
+
+ &__more-info {
+  margin-top: 10px;
+ }
+
+ @media screen and (max-width: 768px) {
+
+  img {
+   width: 40px;
+  }
+
+  &__position,
+  &__more-info {
+   font-size: 10px;
+  }
+
+  &__position {
+   margin-bottom: 15px;
+  }
+
+  &__more-info {
+   margin-top: 10px;
+  }
+ }
+}

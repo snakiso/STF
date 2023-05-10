@@ -1,0 +1,184 @@
+.tasks {
+ margin-bottom: $main-padding;
+ position: relative;
+
+ &__img {
+  position: absolute;
+  left: -200px;
+ }
+
+ &__container {
+  top: 30px;
+  right: 0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 895px;
+  margin-left: auto;
+  margin-right: 0;
+  padding-bottom: 190px;
+ }
+
+ &__box {
+  position: relative;
+  margin-bottom: 60px;
+
+  img {
+   position: absolute;
+   z-index: 2;
+   left: 40px;
+  }
+ }
+
+ &__card {
+  margin-top: 30px;
+  position: relative;
+  border: 1px solid rgba(239, 239, 239, 1);
+  min-height: 190px;
+  background-color: white;
+  max-width: 425px;
+ }
+
+
+ &__text {
+  margin: 0;
+  max-width: 430px;
+  line-height: 150%;
+  padding: 45px 15px 25px 25px;
+ }
+
+ &__info {
+  position: absolute;
+  bottom: 85px;
+  right: 130px;
+  display: flex;
+
+  img {
+   max-height: 90px;
+   margin-right: 20px;
+  }
+
+  &-content {
+   max-width: 360px;
+  }
+
+  &-title {
+   font-weight: 500;
+  }
+
+  &-text {
+   margin-top: 8px;
+   margin-bottom: 16px;
+  }
+
+  &-link {
+   position: relative;
+   color: $other-color;
+   width: fit-content;
+
+   &::after {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 7px;
+    right: -15px;
+    top: 5px;
+    border-radius: 2px;
+    border-top: 2px solid $other-color;
+    border-right: 2px solid $other-color;
+    transform: rotate(45deg);
+    transition: all .2s;
+   }
+
+   &:hover:after {
+    right: -18px;
+   }
+  }
+ }
+
+ @media screen and (max-width: 1200px) {
+
+  &__container {
+   position: relative;
+   width: fit-content;
+   margin: 30px auto 0 auto;
+   padding: 0;
+  }
+
+  &__img {
+   position: relative;
+   margin: auto;
+   display: block;
+   left: auto;
+  }
+
+  &__info {
+   position: relative;
+   right: 0;
+   bottom: 0;
+   justify-content: center;
+   margin-top: 80px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  margin-bottom: 45px;
+
+  &__img {
+   width: 100%;
+  }
+
+  &__container {
+   grid-template-columns: none;
+   grid-template-rows: none;
+   width: calc(100% - 30px);
+   margin: auto;
+  }
+
+  &__box {
+   width: 100%;
+   margin-bottom: 25px;
+
+   img{
+    width: 63px;
+    top: 10px;
+   }
+  }
+
+  &__card {
+   width: 100%;
+   max-width: none;
+
+   &:last-child{
+    margin-bottom: 30px;
+   }
+  }
+
+
+  &__text {
+   font-size: 14px;
+   max-width: none;
+  }
+
+  &__info {
+   margin-top: 40px;
+   img {
+    width: 50px;
+    height: 60px;
+   }
+
+   &-content {
+    max-width: 240px;
+   }
+
+   &-title {
+    font-size: 14px;
+   }
+
+   &-text {
+    font-size: 14px;
+   }
+  }
+ }
+}

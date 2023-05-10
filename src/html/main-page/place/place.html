@@ -1,0 +1,39 @@
+<section class="place">
+  <div class="decor"></div>
+ <div class="wrapper">
+  <h2 class="title title_blue">МЕСТО ПРОВЕДЕНИЯ</h2>
+  <span class="place__detail db">Россия, г. Новосибирск, Станционная ул. 104, МВК «Новосибирск Экспоцентр»</span>
+ </div>
+ <div class="map-block">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7dff6eb1-023d-4cff-b880-0cccd7a96b78"
+   type="text/javascript"></script>
+  <script>
+   var myMap;
+   ymaps.ready(init);
+   function init() {
+    myMap = new ymaps.Map('map', {
+     center: [54.997945, 82.747784],
+     zoom: 15,
+     controls: ['zoomControl',]
+    }, {
+     // searchControlProvider: 'yandex#search'
+    });
+    var myPlacemark = new ymaps.Placemark([54.997945, 82.747784], {
+     balloonContentHeader: '<img src="./img/main-page/location.svg">',
+     balloonContentBody: "",
+     balloonContentFooter: "Мы ждем",
+     hintContent: "Сибирский транспортный форум"
+    }, {
+     iconLayout: 'default#image',
+     iconImageHref: "./img/main-page/location.svg",
+     iconImageSize: [120, 80],
+     iconImageOffset: [-60, -80],
+    });
+    myMap.geoObjects.add(myPlacemark)
+    myMap.behaviors
+     .disable(['rightMouseButtonMagnifier', "scrollZoom"])
+   }        
+  </script>
+  <div id="map"></div>
+ </div>
+</section>

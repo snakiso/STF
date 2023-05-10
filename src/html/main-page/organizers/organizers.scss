@@ -1,0 +1,54 @@
+.organizers {
+ margin-top: $main-padding;
+
+ &__container {
+  display: grid;
+  grid-template-columns: 290px 330px 260px;
+  margin-top: $gaps;
+ }
+
+ &__box {
+  text-align: center;
+  transition: all .2s;
+  &:not(:last-child) {
+   margin-right: 180px;
+  }
+
+  &:hover{
+   transform: scale(1.05);
+  }
+ }
+
+
+ &__position {
+  color: rgba(136, 136, 136, 0.9);
+  font-size: 14px;
+  margin-bottom: 15px;
+ }
+
+ &__more-info {
+  color: rgba(136, 136, 136, 0.9);
+  font-size: 14px;
+  margin-top: 15px;
+ }
+
+ @media screen and (max-width: 768px) {
+  margin-top: 50px;
+
+  &__container {
+   justify-content: space-between;
+   grid-template-columns: 150px 150px;
+   margin-top: 30px;
+  }
+
+  &__box {
+   margin-right: 0 !important;
+  }
+
+  &__box:last-child {
+   grid-column-start: 1;
+   grid-column-end: 3;
+   margin-top: 30px;
+  }
+ }
+}

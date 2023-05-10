@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+@@include('html/common/head/head.html',{
+"title": "Главная"
+})
+
+<body class="body">
+  @@include('html/common/header/header.html',{})
+  @@include('html/common/menu/menu.html',{})
+  <main class="main">
+    @@include('html/main-page/hero/hero.html',{})
+    @@include('html/main-page/tasks/tasks.html',{})
+    @@include('html/main-page/gallery/gallery.html',{})
+    @@include('html/main-page/forum/forum.html',{})
+    @@include('html/main-page/exhibition/exhibition.html')
+    @@include('html/main-page/organizers/organizers.html')
+    @@include('html/main-page/place/place.html')
+  </main>
+  @@include('html/common/footer/footer.html',{})
+  <script src="./js/animations.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/slider.js"></script>
+</body>
+
+</html>

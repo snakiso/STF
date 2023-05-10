@@ -1,0 +1,248 @@
+.tour-agencies {
+  &__container {
+    padding: 60px;
+  }
+
+  &__subtitle {
+    margin: 0 0 30px 0;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 47px;
+    color: #2193CA;
+    text-transform: uppercase;
+  }
+
+  &__operators:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
+  &__sections {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    border-bottom: 1px solid #BABABA;
+  }
+
+  &__section {
+    padding: 12px 0;
+    grid-column: 4 span;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #313131;
+
+    &:last-child {
+      grid-column: 10 / 3 span;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    border-bottom: 1px solid #BABABA;
+    padding: 30px 0;
+
+    &--border-none {
+      border: none;
+    }
+  }
+
+  &__column {
+    grid-column: 4 span;
+
+    &--contacts {
+      grid-column: 5 span;
+    }
+
+    &--links {
+      grid-column: 3 span;
+    }
+  }
+
+  &__prename {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__name {
+    display: block;
+    margin: 0 0 12px 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #2193CA;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 20px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #2193CA;
+      left: 0;
+      top: 7px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &--mb {
+      margin-bottom: 12px !important;
+    }
+
+    &--link {
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+      color: #313131;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+
+    &--points-none {
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &--phone-second {
+      margin-left: 25px;
+      position: relative;
+      color: #313131;
+      display: inline-block;
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 100%;
+        left: -12px;
+        background: rgba(49, 49, 49, 1);
+      }
+    }
+
+    &--site {
+      display: block;
+      display: flex;
+      align-items: center;
+      color: #38B5F2;
+      text-decoration: underline;
+    }
+
+    &--phone {
+      padding-left: 32px;
+      position: relative;
+      display: inline-block;
+      color: #313131;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background: url(../img/tour/phone.svg);
+        left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    &__container {
+      padding: 70px 15px 30px 15px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &__section,
+    &__name,
+    &__item {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__box,
+    &__sections {
+      column-gap: 12px;
+    }
+
+    &__item {
+      &--phone {
+        margin-bottom: 8px;
+      }
+
+      &--phone-second {
+        margin-left: 0;
+        margin-bottom: 8px;
+        padding-left: 32px;
+        display: block;
+
+        &::after {
+          width: 20px;
+          height: 20px;
+          left: 0px;
+          background: url(../img/tour/phone.svg);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    &__container {
+      padding: 70px 0 30px 0;
+      width: 100%;
+      margin: auto;
+      overflow-x: scroll;
+    }
+
+    &__box {
+      width: 600px;
+    }
+
+    &__sections {
+      width: 600px;
+    }
+
+  }
+
+  ::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0, 0);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #38B5F2;
+    height: 3px;
+    border-radius: 7.5px;
+  }
+}
